@@ -72,14 +72,17 @@ $header = fgetcsv($fh, 4096);
 while($line = fgetcsv($fh, 4096)) {
   if(isset($line[20]) && $line[20] === 'Panama Papers' && false !== strpos($line[15], 'TWN')) {
     $line = array_combine($header, $line);
+    $names = array();
     $line['officers'] = array();
     if(isset($ref[$line['node_id']])) {
       foreach($ref[$line['node_id']] AS $nodeId) {
         if(isset($officers[$nodeId])) {
           $line['officers'][] = $officers[$nodeId];
+          $names[] = $officers[$nodeId]['name'];
         }
       }
     }
+    echo $line['name'] . ' - (' . implode(' / ', $names) . ")\n";
     $result[] = $line;
   }
 }
