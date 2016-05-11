@@ -1,6 +1,11 @@
 <?php
 
-$ref = $addressLinks = $address = array();
+$ref = $addressLinks = $address = $caddress = array();
+
+$json = json_decode(file_get_contents(__DIR__ . '/caddress.json'), true);
+foreach ($json['address'] AS $line) {
+    $caddress[$line['node_id']] = $line['caddress'];
+}
 
 /*
   Array
@@ -21,6 +26,10 @@ while ($line = fgetcsv($fh, 2048)) {
         continue;
     }
     $address[$line[5]] = array_combine($header, $line);
+    $address[$line[5]]['caddress'] = '';
+    if (isset($caddress[$line[5]])) {
+        $address[$line[5]]['caddress'] = $caddress[$line[5]];
+    }
 }
 
 $fh = fopen(__DIR__ . '/offshore_leaks_csvs/all_edges.csv', 'r');
