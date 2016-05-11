@@ -36,21 +36,22 @@ $fh = fopen(__DIR__ . '/offshore_leaks_csvs/all_edges.csv', 'r');
   [underlying] => 1
   )
  */
+$hi = array();
 while ($line = fgetcsv($fh, 2048)) {
     switch ($line[1]) {
-        case 'officer_of':
-            if (!isset($ref[$line[2]])) {
-                $ref[$line[2]] = array();
-            }
-            $ref[$line[2]][] = $line[0];
-            break;
-        case 'registered_address':
+        case 'registered address':
             if (isset($address[$line[2]])) {
                 if (!isset($addressLinks[$line[0]])) {
                     $addressLinks[$line[0]] = array();
                 }
                 $addressLinks[$line[0]][] = $address[$line[2]];
             }
+            break;
+        default:
+            if (!isset($ref[$line[2]])) {
+                $ref[$line[2]] = array();
+            }
+            $ref[$line[2]][] = array($line[0], $line[1]);
             break;
     }
 }
@@ -109,13 +110,14 @@ $header = fgetcsv($fh, 4096);
 while ($line = fgetcsv($fh, 4096)) {
     if (isset($line[20]) && $line[20] === 'Panama Papers' && false !== strpos($line[15], 'TWN')) {
         $line = array_combine($header, $line);
-        $names = array();
         $line['officers'] = array();
         if (isset($ref[$line['node_id']])) {
-            foreach ($ref[$line['node_id']] AS $nodeId) {
-                if (isset($officers[$nodeId])) {
-                    $line['officers'][] = $officers[$nodeId];
-                    $names[] = $officers[$nodeId]['name'];
+            foreach ($ref[$line['node_id']] AS $node) {
+                if (isset($officers[$node[0]])) {
+                    if (!isset($line['officers'][$node[1]])) {
+                        $line['officers'][$node[1]] = array();
+                    }
+                    $line['officers'][$node[1]][] = $officers[$node[0]];
                 }
             }
         }
