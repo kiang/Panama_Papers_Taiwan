@@ -38,7 +38,7 @@ Array
 $officers = array();
 $header = fgetcsv($fh, 4096);
 while($line = fgetcsv($fh, 4096)) {
-  if(isset($line[6]) && $line[6] === 'Panama Papers' && false !== strpos($line[3], 'TWN')) {
+  if(isset($line[6]) && $line[6] === 'Panama Papers') {
     $officers[$line[5]] = array_combine($header, $line);
   }
 }
