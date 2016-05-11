@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Panama Papers Taiwan Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div id="header">
+                <h1>Panama Papers Taiwan Index</h1>
+            </div>
+            <div id="content">
+                <div class="form">
+                    <div class="form-group">
+                        <input id="searchEntity" class="form-control" type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="col-md-12" id="searchResult"></div>
+            </div>
+            <div id="footer">
+
+            </div>
+        </div>
+        <script src="//code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script>
+            var base = [];
+            $.getJSON('taiwan.json', {}, function (d) {
+                base = d;
+                for (k in base) {
+                    var officers = '';
+                    for (ok in base[k]['officers']) {
+                        officers += '<hr />' + ok;
+                        for (oki in base[k]['officers'][ok]) {
+                            officers += '<br />' + base[k]['officers'][ok][oki]['name'];
+                        }
+                    }
+                    $('div#searchResult').append('<div class="col-md-3" style="padding: 5px; text-align: left; border: 1px solid grey; margin: 10px;">'
+                            + '<strong>' + base[k]['name'] + '</strong>'
+                            + '<br />' + base[k]['address']
+                            + officers
+                            + '</div>');
+                }
+                $('input#searchEntity').autocomplete({
+                    minLength: 0,
+                    source: function (u) {
+                        $('div#searchResult').html('');
+                        u.term.toLowerCase();
+                        var keys = ['name', 'address'];
+                        for (k in base) {
+                            var keyPassed = false;
+                            var officers = '';
+                            for (i in keys) {
+                                if (base[k][keys[i]].toLowerCase().indexOf(u.term) > -1) {
+                                    keyPassed = true;
+                                }
+                            }
+                            for (ok in base[k]['officers']) {
+                                officers += '<hr />' + ok;
+                                for (oki in base[k]['officers'][ok]) {
+                                    if (base[k]['officers'][ok][oki]['name'].toLowerCase().indexOf(u.term) > -1) {
+                                        keyPassed = true;
+                                    }
+                                    officers += '<br />' + base[k]['officers'][ok][oki]['name'];
+                                }
+                            }
+                            if (keyPassed) {
+                                $('div#searchResult').append('<div class="col-md-3" style="padding: 5px; text-align: left; border: 1px solid grey; margin: 10px;">'
+                                        + '<strong>' + base[k]['name'] + '</strong>'
+                                        + '<br />' + base[k]['address']
+                                        + officers
+                                        + '</div>');
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
