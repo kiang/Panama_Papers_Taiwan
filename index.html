@@ -40,7 +40,7 @@
                         }
                     }
                     $('div#searchResult').append('<div class="col-md-3" style="padding: 5px; text-align: left; border: 1px solid grey; margin: 10px;">'
-                            + '<strong>' + base[k]['name'] + '</strong>'
+                            + '<strong><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['node_id'] + '" target="_blank">' + base[k]['name'] + '</a></strong>'
                             + '<br />' + base[k]['address']
                             + officers
                             + '</div>');
@@ -70,7 +70,7 @@
                             }
                             if (keyPassed) {
                                 $('div#searchResult').append('<div class="col-md-3" style="padding: 5px; text-align: left; border: 1px solid grey; margin: 10px;">'
-                                        + '<strong>' + base[k]['name'] + '</strong>'
+                                        + '<strong><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['node_id'] + '" target="_blank">' + base[k]['name'] + '</a></strong>'
                                         + '<br />' + base[k]['address']
                                         + officers
                                         + '</div>');
