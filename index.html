@@ -5,33 +5,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css" />
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="bootstrap.min.css" />
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=1393405437614114&version=v2.3";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
         <div class="container">
-            <div id="header">
-                <h1>Panama Papers Taiwan Index</h1>
-            </div>
-            <div id="content">
-                <div class="form">
-                    <div class="form-group">
-                        <input id="searchEntity" class="form-control" type="text" placeholder="Search">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="./">Panama Papers Taiwan Index</a>
                     </div>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" id="searchEntity" class="form-control" placeholder="搜尋…" autofocus>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-12" id="searchResult"></div>
+            </nav>
+
+            <div class="col-md-12">
+                <div class="alert alert-info">
+                    在 Panama Papers 裡的個人和公司並不代表其違法
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-primary btn-fullpage">切換顯示模式</button>
+                </div>
+                <div class="clearfix"></div>
+                <p>&nbsp;</p>
+                <div id="searchResult"></div>
             </div>
-            <div id="footer">
-                * 在 Panama Papers 裡的個人和公司不代表他們違法，事實上大多應該是合乎相關法令
-                <div id="fb-root"></div>
-                <script>(function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id))
-                            return;
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=1393405437614114&version=v2.3";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
+
+            <p>&nbsp;</p>
+
+            <div class="footer">
                 <div class="col-md-6" style="text-align:center">
                     <div class="fb-page" data-href="https://www.facebook.com/k.olc.tw" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false" data-colorscheme="dark"></div>
                 </div>
@@ -40,62 +57,111 @@
                     <div class="fb-page" data-href="https://www.facebook.com/g0v.tw" data-width="500" data-hide-cover="true" data-show-facepile="true" data-show-posts="false" data-colorscheme="dark"></div>
                 </div>
             </div>
+
+            <p>&nbsp;</p>
+
         </div>
         <script src="//code.jquery.com/jquery-1.12.3.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script>
-                    var base = [];
-                    $.getJSON('taiwan.json', {}, function (d) {
-                        base = d;
-                        for (k in base) {
-                            var officers = '';
-                            for (ok in base[k]['officers']) {
-                                officers += '<hr />' + ok;
-                                for (oki in base[k]['officers'][ok]) {
-                                    officers += '<br /><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['officers'][ok][oki]['node_id'] + '" target="_blank">' + base[k]['officers'][ok][oki]['name'] + '</a>';
-                                }
-                            }
-                            $('div#searchResult').append('<div class="col-md-3" style="padding: 5px; text-align: left; border: 1px solid grey; margin: 10px;">'
-                                    + '<strong><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['node_id'] + '" target="_blank">' + base[k]['name'] + '</a></strong>'
-                                    + '<br />' + base[k]['address']
-                                    + officers
-                                    + '</div>');
+            var base = [];
+            $.getJSON('taiwan.json', function (d) {
+                base = d;
+                var count = 0,
+                    result = '';
+
+                for (k in base) {
+                    var officers = '',
+                        clearfix = '';
+
+                    count++;
+                    if (count >= 3) {
+                        clearfix = '<div class="clearfix"></div>';
+                        count = 0;
+                    } else {
+                        clearfix = '';
+                    }
+
+                    for (ok in base[k]['officers']) {
+                        officers += ok;
+                        for (oki in base[k]['officers'][ok]) {
+                            officers += '<br><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['officers'][ok][oki]['node_id'] + '" target="_blank">' + base[k]['officers'][ok][oki]['name'] + '</a>';
                         }
-                        $('input#searchEntity').autocomplete({
-                            minLength: 0,
-                            source: function (u) {
-                                $('div#searchResult').html('');
-                                u.term.toLowerCase();
-                                var keys = ['name', 'address'];
-                                for (k in base) {
-                                    var keyPassed = false;
-                                    var officers = '';
-                                    for (i in keys) {
-                                        if (base[k][keys[i]].toLowerCase().indexOf(u.term) > -1) {
-                                            keyPassed = true;
-                                        }
-                                    }
-                                    for (ok in base[k]['officers']) {
-                                        officers += '<hr />' + ok;
-                                        for (oki in base[k]['officers'][ok]) {
-                                            if (base[k]['officers'][ok][oki]['name'].toLowerCase().indexOf(u.term) > -1) {
-                                                keyPassed = true;
-                                            }
-                                            officers += '<br /><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['officers'][ok][oki]['node_id'] + '" target="_blank">' + base[k]['officers'][ok][oki]['name'] + '</a>';
-                                        }
-                                    }
-                                    if (keyPassed) {
-                                        $('div#searchResult').append('<div class="col-md-3" style="padding: 5px; text-align: left; border: 1px solid grey; margin: 10px;">'
-                                                + '<strong><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['node_id'] + '" target="_blank">' + base[k]['name'] + '</a></strong>'
-                                                + '<br />' + base[k]['address']
-                                                + officers
-                                                + '</div>');
-                                    }
+                    }
+                    $('#searchResult').append(
+                        '<div class="col-md-4 thumbnail">'
+                            + '<div class="caption">'
+                                + '<h4><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['node_id'] + '" target="_blank">' + base[k]['name'] + '</a></h4>'
+                                + '<p>' + base[k]['address'] + '</p>'
+                                + officers
+                            + '</div>'
+                        + '</div>'
+                        + clearfix
+                    );
+                }
+                $('#searchEntity').autocomplete({
+                    minLength: 0,
+                    source: function (u) {
+                        $('#searchResult').html('');
+                        u.term.toLowerCase();
+                        var keys = ['name', 'address'],
+                            search_count = 0;
+
+                        for (k in base) {
+                            var keyPassed = false,
+                                officers = '',
+                                search_clearfix = '';
+
+                            search_count++;
+                            console.log(search_count);
+                            if (search_count >= 3) {
+                                search_clearfix = '<div class="clearfix"></div>';
+                                search_count = 0;
+                            } else {
+                                search_clearfix = '';
+                            }
+
+                            for (i in keys) {
+                                if (base[k][keys[i]].toLowerCase().indexOf(u.term) > -1) {
+                                    keyPassed = true;
                                 }
                             }
-                        });
-                    });
+                            for (ok in base[k]['officers']) {
+                                officers += '<hr>' + ok;
+                                for (oki in base[k]['officers'][ok]) {
+                                    if (base[k]['officers'][ok][oki]['name'].toLowerCase().indexOf(u.term) > -1) {
+                                        keyPassed = true;
+                                    }
+                                    officers += '<br><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['officers'][ok][oki]['node_id'] + '" target="_blank">' + base[k]['officers'][ok][oki]['name'] + '</a>';
+                                }
+                            }
+                            if (keyPassed) {
+                                $('#searchResult').append(
+                                    '<div class="col-md-4 thumbnail">'
+                                        + '<div class="caption">'
+                                            + '<h4><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['node_id'] + '" target="_blank">' + base[k]['name'] + '</a></h4>'
+                                            + '<p>' + base[k]['address'] + '</p>'
+                                            + officers
+                                        + '</div>'
+                                    + '</div>'
+                                    + search_clearfix
+                                );
+                            }
+                        }
+                    }
+                });
+            });
+
+            $('.btn-fullpage').on('click', function() {
+                var that = $(this);
+                if (that.hasClass('active')) {
+                    $('.thumbnail').removeClass('col-md-12').addClass('col-md-4');
+                } else {
+                    $('.thumbnail').removeClass('col-md-4').addClass('col-md-12')
+                }
+                that.toggleClass('active');
+            });
         </script>
     </body>
 </html>
