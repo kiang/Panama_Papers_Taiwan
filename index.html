@@ -36,7 +36,7 @@
                     for (ok in base[k]['officers']) {
                         officers += '<hr />' + ok;
                         for (oki in base[k]['officers'][ok]) {
-                            officers += '<br />' + base[k]['officers'][ok][oki]['name'];
+                            officers += '<br /><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['officers'][ok][oki]['node_id'] + '" target="_blank">' + base[k]['officers'][ok][oki]['name'] + '</a>';
                         }
                     }
                     $('div#searchResult').append('<div class="col-md-3" style="padding: 5px; text-align: left; border: 1px solid grey; margin: 10px;">'
@@ -65,7 +65,7 @@
                                     if (base[k]['officers'][ok][oki]['name'].toLowerCase().indexOf(u.term) > -1) {
                                         keyPassed = true;
                                     }
-                                    officers += '<br />' + base[k]['officers'][ok][oki]['name'];
+                                    officers += '<br /><a href="https://offshoreleaks.icij.org/nodes/' + base[k]['officers'][ok][oki]['node_id'] + '" target="_blank">' + base[k]['officers'][ok][oki]['name'] + '</a>';
                                 }
                             }
                             if (keyPassed) {
