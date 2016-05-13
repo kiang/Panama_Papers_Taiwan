@@ -1,4 +1,777 @@
 {
+    "蔡英文": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "蔡英文",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/550b22db-54f0-4304-842e-43226ab936af"
+            ]
+        ],
+        "names": {
+            "CAI,YING,WEN": [
+                "CAI",
+                "YING",
+                "WEN"
+            ],
+            "CAI,YING,WUN": [
+                "CAI",
+                "YING",
+                "WUN"
+            ],
+            "TSAI,YING,WEN": [
+                "TSAI",
+                "YING",
+                "WEN"
+            ],
+            "SA,YING,WEN": [
+                "SA",
+                "YING",
+                "WEN"
+            ],
+            "SA,YING,WUN": [
+                "SA",
+                "YING",
+                "WUN"
+            ]
+        }
+    },
+    "徐欣瑩": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "徐欣瑩",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/550c640c-1968-45f1-ad23-025cacb5b862"
+            ]
+        ],
+        "names": {
+            "XU,XIN,YING": [
+                "XU",
+                "XIN",
+                "YING"
+            ],
+            "SYU,SIN,YING": [
+                "SYU",
+                "SIN",
+                "YING"
+            ],
+            "HSU,HSIN,YING": [
+                "HSU",
+                "HSIN",
+                "YING"
+            ],
+            "SHIU,SHIN,YING": [
+                "SHIU",
+                "SHIN",
+                "YING"
+            ]
+        }
+    },
+    "吳敦義": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "吳敦義",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/550da1eb-12d4-439d-8c26-084b6ab936af"
+            ]
+        ],
+        "names": {
+            "WU,DUN,YI": [
+                "WU",
+                "DUN",
+                "YI"
+            ],
+            "WU,TUN,I": [
+                "WU",
+                "TUN",
+                "I"
+            ],
+            "WU,DUEN,YI": [
+                "WU",
+                "DUEN",
+                "YI"
+            ],
+            "WU,TUN,YI": [
+                "WU",
+                "TUN",
+                "YI"
+            ],
+            "WU,DUI,YI": [
+                "WU",
+                "DUI",
+                "YI"
+            ],
+            "WU,DUEI,YI": [
+                "WU",
+                "DUEI",
+                "YI"
+            ],
+            "WU,TUI,I": [
+                "WU",
+                "TUI",
+                "I"
+            ],
+            "WU,TUI,YI": [
+                "WU",
+                "TUI",
+                "YI"
+            ]
+        }
+    },
+    "朱立倫": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "朱立倫",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/550da209-cd1c-4dd6-9bc9-1b416ab936af"
+            ]
+        ],
+        "names": {
+            "ZHU,LI,LUN": [
+                "ZHU",
+                "LI",
+                "LUN"
+            ],
+            "JHU,LI,LUN": [
+                "JHU",
+                "LI",
+                "LUN"
+            ],
+            "CHU,LI,LUN": [
+                "CHU",
+                "LI",
+                "LUN"
+            ],
+            "JU,LI,LUEN": [
+                "JU",
+                "LI",
+                "LUEN"
+            ],
+            "SHU,LI,LUN": [
+                "SHU",
+                "LI",
+                "LUN"
+            ],
+            "SHU,LI,LUEN": [
+                "SHU",
+                "LI",
+                "LUEN"
+            ]
+        }
+    },
+    "洪秀柱": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "洪秀柱",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/5513c04e-5634-4c95-8d53-12916ab936af"
+            ]
+        ],
+        "names": {
+            "HONG,XIU,ZHU": [
+                "HONG",
+                "XIU",
+                "ZHU"
+            ],
+            "HONG,SIOU,JHU": [
+                "HONG",
+                "SIOU",
+                "JHU"
+            ],
+            "HUNG,HSIU,CHU": [
+                "HUNG",
+                "HSIU",
+                "CHU"
+            ],
+            "HUNG,SHIOU,JU": [
+                "HUNG",
+                "SHIOU",
+                "JU"
+            ]
+        }
+    },
+    "陳建仁": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "陳建仁",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/5513c0c0-4f94-4c91-814f-148d6ab936af"
+            ]
+        ],
+        "names": {
+            "CHEN,JIAN,REN": [
+                "CHEN",
+                "JIAN",
+                "REN"
+            ],
+            "CHEN,CHIEN,JEN": [
+                "CHEN",
+                "CHIEN",
+                "JEN"
+            ],
+            "ZHEN,JIAN,REN": [
+                "ZHEN",
+                "JIAN",
+                "REN"
+            ],
+            "JHEN,JIAN,REN": [
+                "JHEN",
+                "JIAN",
+                "REN"
+            ],
+            "JEN,JIAN,REN": [
+                "JEN",
+                "JIAN",
+                "REN"
+            ]
+        }
+    },
+    "王如玄": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "王如玄",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/5514594a-17b4-4129-8a6e-17a06ab936af"
+            ]
+        ],
+        "names": {
+            "WANG,RU,XUAN": [
+                "WANG",
+                "RU",
+                "XUAN"
+            ],
+            "WANG,RU,SYUAN": [
+                "WANG",
+                "RU",
+                "SYUAN"
+            ],
+            "WANG,JU,HSUAN": [
+                "WANG",
+                "JU",
+                "HSUAN"
+            ],
+            "WANG,RU,SHIUAN": [
+                "WANG",
+                "RU",
+                "SHIUAN"
+            ],
+            "YU,RU,XUAN": [
+                "YU",
+                "RU",
+                "XUAN"
+            ],
+            "YU,RU,SYUAN": [
+                "YU",
+                "RU",
+                "SYUAN"
+            ],
+            "YU,JU,HSUAN": [
+                "YU",
+                "JU",
+                "HSUAN"
+            ],
+            "YU,RU,SHIUAN": [
+                "YU",
+                "RU",
+                "SHIUAN"
+            ]
+        }
+    },
+    "李鴻源": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "李鴻源",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/55350e95-2ebc-4e24-a200-7c916ab936af"
+            ]
+        ],
+        "names": {
+            "LI,HONG,YUAN": [
+                "LI",
+                "HONG",
+                "YUAN"
+            ],
+            "LI,HUNG,YUAN": [
+                "LI",
+                "HUNG",
+                "YUAN"
+            ]
+        }
+    },
+    "黃柏壽": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "黃柏壽",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/55354419-cc64-467b-9df2-7c916ab936af"
+            ]
+        ],
+        "names": {
+            "HUANG,BO,SHOU": [
+                "HUANG",
+                "BO",
+                "SHOU"
+            ],
+            "HUANG,PO,SHOU": [
+                "HUANG",
+                "PO",
+                "SHOU"
+            ],
+            "HUANG,BAI,SHOU": [
+                "HUANG",
+                "BAI",
+                "SHOU"
+            ],
+            "HUANG,PAI,SHOU": [
+                "HUANG",
+                "PAI",
+                "SHOU"
+            ]
+        }
+    },
+    "楊志良": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "楊志良",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/55371463-2a94-4064-b6e5-7c9b6ab936af"
+            ]
+        ],
+        "names": {
+            "YANG,ZHI,LIANG": [
+                "YANG",
+                "ZHI",
+                "LIANG"
+            ],
+            "YANG,JHIH,LIANG": [
+                "YANG",
+                "JHIH",
+                "LIANG"
+            ],
+            "YANG,CHIH,LIANG": [
+                "YANG",
+                "CHIH",
+                "LIANG"
+            ],
+            "YANG,JR,LIANG": [
+                "YANG",
+                "JR",
+                "LIANG"
+            ]
+        }
+    },
+    "宋楚瑜": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "宋楚瑜",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/5539dd6d-1c68-41bb-b1b9-49526ab936af"
+            ]
+        ],
+        "names": {
+            "SONG,CHU,YU": [
+                "SONG",
+                "CHU",
+                "YU"
+            ],
+            "SUNG,CHU,YU": [
+                "SUNG",
+                "CHU",
+                "YU"
+            ]
+        }
+    },
+    "施明德": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "施明德",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/555b2666-1d6c-4e06-a94c-5a316ab936af"
+            ]
+        ],
+        "names": {
+            "YI,MING,DE": [
+                "YI",
+                "MING",
+                "DE"
+            ],
+            "I,MING,TE": [
+                "I",
+                "MING",
+                "TE"
+            ],
+            "SHI,MING,DE": [
+                "SHI",
+                "MING",
+                "DE"
+            ],
+            "SHIH,MING,DE": [
+                "SHIH",
+                "MING",
+                "DE"
+            ],
+            "SHIH,MING,TE": [
+                "SHIH",
+                "MING",
+                "TE"
+            ],
+            "SHR,MING,DE": [
+                "SHR",
+                "MING",
+                "DE"
+            ],
+            "YI,MING,TE": [
+                "YI",
+                "MING",
+                "TE"
+            ]
+        }
+    },
+    "許榮淑": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "許榮淑",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/559a9894-f8c4-4d87-952c-76dd6ab936af"
+            ]
+        ],
+        "names": {
+            "XU,RONG,SHU": [
+                "XU",
+                "RONG",
+                "SHU"
+            ],
+            "SYU,RONG,SHU": [
+                "SYU",
+                "RONG",
+                "SHU"
+            ],
+            "HSU,JUNG,SHU": [
+                "HSU",
+                "JUNG",
+                "SHU"
+            ],
+            "SHIU,RUNG,SHU": [
+                "SHIU",
+                "RUNG",
+                "SHU"
+            ],
+            "HU,RONG,SHU": [
+                "HU",
+                "RONG",
+                "SHU"
+            ],
+            "HU,JUNG,SHU": [
+                "HU",
+                "JUNG",
+                "SHU"
+            ],
+            "HU,RUNG,SHU": [
+                "HU",
+                "RUNG",
+                "SHU"
+            ]
+        }
+    },
+    "藍信祺": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "藍信祺",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/55c4e834-c8dc-4e4d-803c-44f36ab936af"
+            ]
+        ],
+        "names": {
+            "LAN,XIN,QI": [
+                "LAN",
+                "XIN",
+                "QI"
+            ],
+            "LAN,SIN,CI": [
+                "LAN",
+                "SIN",
+                "CI"
+            ],
+            "LAN,HSIN,CHI": [
+                "LAN",
+                "HSIN",
+                "CHI"
+            ],
+            "LAN,SHIN,CHI": [
+                "LAN",
+                "SHIN",
+                "CHI"
+            ],
+            "LAN,SHEN,QI": [
+                "LAN",
+                "SHEN",
+                "QI"
+            ],
+            "LAN,SHEN,CI": [
+                "LAN",
+                "SHEN",
+                "CI"
+            ],
+            "LAN,SHEN,CHI": [
+                "LAN",
+                "SHEN",
+                "CHI"
+            ]
+        }
+    },
+    "凌琪傑": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "凌琪傑",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/55c4e851-b154-47a4-b890-6e0c6ab936af"
+            ]
+        ],
+        "names": {
+            "LING,QI,JIE": [
+                "LING",
+                "QI",
+                "JIE"
+            ],
+            "LING,CI,JIE": [
+                "LING",
+                "CI",
+                "JIE"
+            ],
+            "LING,CHI,CHIEH": [
+                "LING",
+                "CHI",
+                "CHIEH"
+            ],
+            "LING,CHI,JIE": [
+                "LING",
+                "CHI",
+                "JIE"
+            ]
+        }
+    },
+    "夏涵人": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "夏涵人",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/561b11fe-934c-4bde-b0a4-18ea6ab936af"
+            ]
+        ],
+        "names": {
+            "JIA,HAN,REN": [
+                "JIA",
+                "HAN",
+                "REN"
+            ],
+            "CHIA,HAN,JEN": [
+                "CHIA",
+                "HAN",
+                "JEN"
+            ],
+            "XIA,HAN,REN": [
+                "XIA",
+                "HAN",
+                "REN"
+            ],
+            "SIA,HAN,REN": [
+                "SIA",
+                "HAN",
+                "REN"
+            ],
+            "HSIA,HAN,JEN": [
+                "HSIA",
+                "HAN",
+                "JEN"
+            ],
+            "SHIA,HAN,REN": [
+                "SHIA",
+                "HAN",
+                "REN"
+            ]
+        }
+    },
+    "林幼雄": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "林幼雄",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/561b1221-23d8-4316-aca2-4bd66ab936af"
+            ]
+        ],
+        "names": {
+            "LIN,YOU,XIONG": [
+                "LIN",
+                "YOU",
+                "XIONG"
+            ],
+            "LIN,YOU,SYONG": [
+                "LIN",
+                "YOU",
+                "SYONG"
+            ],
+            "LIN,YU,HSIUNG": [
+                "LIN",
+                "YU",
+                "HSIUNG"
+            ],
+            "LIN,YOU,SHIUNG": [
+                "LIN",
+                "YOU",
+                "SHIUNG"
+            ]
+        }
+    },
+    "洪美珍": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "洪美珍",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/561b1231-087c-4789-8efe-66bf6ab936af"
+            ]
+        ],
+        "names": {
+            "HONG,MEI,ZHEN": [
+                "HONG",
+                "MEI",
+                "ZHEN"
+            ],
+            "HONG,MEI,JHEN": [
+                "HONG",
+                "MEI",
+                "JHEN"
+            ],
+            "HUNG,MEI,CHEN": [
+                "HUNG",
+                "MEI",
+                "CHEN"
+            ],
+            "HUNG,MEI,JEN": [
+                "HUNG",
+                "MEI",
+                "JEN"
+            ]
+        }
+    },
+    "張東山": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "張東山",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/561b1246-8340-43d7-aa03-18ea6ab936af"
+            ]
+        ],
+        "names": {
+            "ZHANG,DONG,SHAN": [
+                "ZHANG",
+                "DONG",
+                "SHAN"
+            ],
+            "JHANG,DONG,SHAN": [
+                "JHANG",
+                "DONG",
+                "SHAN"
+            ],
+            "CHANG,TUNG,SHAN": [
+                "CHANG",
+                "TUNG",
+                "SHAN"
+            ],
+            "JANG,DUNG,SHAN": [
+                "JANG",
+                "DUNG",
+                "SHAN"
+            ]
+        }
+    },
+    "林麗容": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "林麗容",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/561b1253-2168-4141-ae4a-66bf6ab936af"
+            ],
+            [
+                "立法委員",
+                "新北市 > 第04選區[區域]",
+                "林麗容",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/550ce2d6-1a5c-45d0-b12a-0af26ab936af"
+            ]
+        ],
+        "names": {
+            "LIN,LI,RONG": [
+                "LIN",
+                "LI",
+                "RONG"
+            ],
+            "LIN,LI,JUNG": [
+                "LIN",
+                "LI",
+                "JUNG"
+            ],
+            "LIN,LI,RUNG": [
+                "LIN",
+                "LI",
+                "RUNG"
+            ]
+        }
+    },
+    "朱淑芳": {
+        "candidates": [
+            [
+                "總統(副總統)",
+                "",
+                "朱淑芳",
+                "http:\/\/k.olc.tw\/elections\/candidates\/view\/561b1271-99ec-42ea-bea9-18d46ab936af"
+            ]
+        ],
+        "names": {
+            "ZHU,SHU,FANG": [
+                "ZHU",
+                "SHU",
+                "FANG"
+            ],
+            "JHU,SHU,FANG": [
+                "JHU",
+                "SHU",
+                "FANG"
+            ],
+            "CHU,SHU,FANG": [
+                "CHU",
+                "SHU",
+                "FANG"
+            ],
+            "JU,SHU,FANG": [
+                "JU",
+                "SHU",
+                "FANG"
+            ],
+            "SHU,SHU,FANG": [
+                "SHU",
+                "SHU",
+                "FANG"
+            ]
+        }
+    },
     "高金素梅": {
         "candidates": [
             [
@@ -3890,33 +4663,6 @@
                 "WU",
                 "PING",
                 "JUI"
-            ]
-        }
-    },
-    "林麗容": {
-        "candidates": [
-            [
-                "立法委員",
-                "新北市 > 第04選區[區域]",
-                "林麗容",
-                "http:\/\/k.olc.tw\/elections\/candidates\/view\/550ce2d6-1a5c-45d0-b12a-0af26ab936af"
-            ]
-        ],
-        "names": {
-            "LIN,LI,RONG": [
-                "LIN",
-                "LI",
-                "RONG"
-            ],
-            "LIN,LI,JUNG": [
-                "LIN",
-                "LI",
-                "JUNG"
-            ],
-            "LIN,LI,RUNG": [
-                "LIN",
-                "LI",
-                "RUNG"
             ]
         }
     },
