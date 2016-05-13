@@ -7,7 +7,7 @@ if (!file_exists($cachePath)) {
 }
 
 $candidates = array();
-$fh = fopen('/home/kiang/public_html/elections/Console/Command/data/2016.csv', 'r');
+$fh = fopen('/home/kiang/public_html/elections/Console/Command/data/2012.csv', 'r');
 while ($line = fgetcsv($fh, 2048)) {
     if (!isset($candidates[$line[2]])) {
         $candidates[$line[2]] = array(
@@ -149,4 +149,4 @@ foreach ($candidates AS $name => $data) {
     }
 }
 
-file_put_contents(__DIR__ . '/2016.json', json_encode($candidates, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+file_put_contents(__DIR__ . '/2012.json', json_encode($candidates, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
