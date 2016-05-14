@@ -25,7 +25,7 @@ while ($line = fgetcsv($fh, 4096)) {
 
 $jsons = array('2012.json', '2014.json', '2016.json');
 $fh = fopen(__DIR__ . '/match.csv', 'w');
-fputcsv($fh, array('公職', '中文姓名', '英文姓名', 'node_id', '選舉黃頁網址'));
+fputcsv($fh, array('公職', '推薦政黨', '中文姓名', '英文姓名', 'node_id', '選舉黃頁網址'));
 foreach ($jsons AS $jsonFile) {
     $json = json_decode(file_get_contents(__DIR__ . '/' . $jsonFile), true);
     foreach ($json AS $item) {
@@ -55,7 +55,9 @@ foreach ($jsons AS $jsonFile) {
                 foreach ($officers[$nameKey] AS $nodeId => $source) {
                     $icij[] = "[{$source}]{$nodeId}";
                 }
-                fputcsv($fh, array("[{$candidate[0]}]{$candidate[1]}", $candidate[2], $nameFound, implode('|', $icij), $candidate[3]));
+                $pos = strrpos($candidate[3], '/');
+                $data = json_decode(file_get_contents('http://localhost/~kiang/elections/api/candidates/view/' . substr($candidate[3], $pos + 1)), true);
+                fputcsv($fh, array("[{$candidate[0]}]{$candidate[1]}", $data['candidate']['Candidate']['party'], $candidate[2], $nameFound, implode('|', $icij), $candidate[3]));
             }
         }
     }
